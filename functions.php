@@ -512,8 +512,8 @@ function prologue_poweredby_link() {
 /* Custom Header Code */
 define( 'HEADER_TEXTCOLOR', '3478E3' );
 define( 'HEADER_IMAGE', '' ); // %s is theme dir uri
-define( 'HEADER_IMAGE_WIDTH', 980);
-define( 'HEADER_IMAGE_HEIGHT', 120);
+define( 'HEADER_IMAGE_WIDTH', 960);
+define( 'HEADER_IMAGE_HEIGHT', 195);
 
 function p2_admin_header_style() {
 ?>
@@ -566,9 +566,9 @@ function p2_admin_header_style() {
 function p2_header_style() {
 ?>
 	<style type="text/css">
-		<?php if ( '' != get_header_image() ) : ?>
+		<?php if (1) /*if ( '' != get_header_image() )*/ : ?>
 		#header {
-			background: url(<?php header_image(); ?>) repeat;
+			background: url(<?php echo get_bloginfo('stylesheet_directory').'/images/header.jpg'; /* tikirobot change */?>) ;
 			height: <?php echo HEADER_IMAGE_HEIGHT; ?>px;
 		}
 		#header a.secondary {
@@ -591,11 +591,12 @@ function p2_header_style() {
 			-moz-box-shadow: none !important;
 			height: <?php echo HEADER_IMAGE_HEIGHT; ?>px;
 		}
+        <?php /* tikirobot change - comment out box-shadow
 		#header {
 			box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2) !important;
 			-webkit-box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2) !important;
 			-moz-box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2) !important;
-		}
+		} */ ?>
 		<?php endif; ?>
 		<?php if ( 'blank' == get_header_textcolor() ) { ?>
 		#header h1, #header small {

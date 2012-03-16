@@ -1,9 +1,8 @@
 /*
-Theme Name: P2
-Theme URI: http://p2theme.com/
-Author: Automattic
-Author URI: http://automattic.com/
-Description: A group blog theme for short update messages, inspired by Twitter. Featuring: Hassle-free posting from the front page. Perfect for group blogging, or as a liveblog theme. Dynamic page updates. Threaded comment display on the front page. In-line editing for posts and comments. Live tag suggestion based on previously used tags. A show/hide feature for comments, to keep things tidy. Real-time notifications when a new comment or update is posted. Super-handy keyboard shortcuts. Helvetica Neue for you modern font lovers.
+Theme Name: TikiRobot P2
+Author: tikirobot crew
+Author URI: http://tikirobot.net
+Description: A modified p2 theme for tikirobot
 Version: 1.3.3
 Tags: blue, two-columns, fixed-width, rtl-language-support, right-sidebar, white, light, front-page-post-form, translation-ready
 License: GNU General Public License v2.0
@@ -43,7 +42,7 @@ pre, code {
 	overflow: auto;
 }
 #header {
-	min-height: 120px;
+	min-height: 195px; /* tikirobot change */
 }
 #header .sleeve {
 	display: inline-block;
@@ -82,14 +81,14 @@ blockquote + blockquote {
 	margin-top: -3px;
 	padding: 0 12px 12px 12px;
 }
-#header .sleeve, #wrapper, #footer {
+#footer { /* tikirobot change - remove #header .sleeve, #wrapper */
 	border: 0;
 	-webkit-box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
 	-moz-box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
 	box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
 }
 #header {
-	width: 980px;
+	width: 960px; /* tikirobot change */
 	margin: 0 auto;
 }
 #footer {
@@ -105,7 +104,7 @@ blockquote + blockquote {
 #wrapper {
 	/* this is #sidebar bg */
 	border: solid;
-	border-width: 1px;
+	border-width: 0px; /* tikirobot change */
 	width: 978px;
 	margin: 0 auto;
 	position: relative;
@@ -128,7 +127,7 @@ blockquote + blockquote {
 	width: auto;
 }
 #postbox {
-	background: url(i/white-93.png);
+	/* tikirobot change - background: url(i/white-93.png); */
 	position: relative;
 	padding: 16px 15px 16px 14px;
 }
@@ -503,6 +502,74 @@ h2 a.rss:hover {
 	top: 0;
 	padding: 6px 12px 18px 12px;
 }
+
+#sidebar #top { /* tikirobot change */
+	background: url(images/bg_sidebar_topright_212.gif) no-repeat;
+	width: 212px;
+	height: 16px;
+}
+
+#sidebar #bg { /* tikirobot change */
+	background:#E6E6DC;
+	padding: 0 10px 30px 10px;
+	width:192px;
+}
+
+/* tikirobot change - add twitter styles */
+div#twitterings {
+	background:#E6E6DC;
+	margin-bottom:10px;
+    font-size: 140%;
+}
+
+
+div#twitterings .title {
+	background: #E6E6DC url(images/bg_twittering.gif) no-repeat;
+	height:48px;
+	padding-left: 55px;
+	padding-top: 6px;
+	font-size: 1.2em;
+	color:#5F6039;
+	font-family:Georgia, "Times New Roman", Times, serif;
+	font-weight:bold;
+}
+
+
+div.twitter {
+	margin:0 0 10px 0;
+	padding:0 15px 10px 15px;
+	font-size:0.9em;
+}
+
+div.twitter img {
+	margin:0 5px 0 0;
+	padding: 0;
+	float:left;
+	width: 24px;
+	height: 24px;
+}
+
+
+.twitterRight {
+	float:right;
+	width:126px;
+}
+
+.twitterMeta {
+	font-size:.9em;
+	padding:2px 0 0 0;
+	margin:0;
+	color:#888;
+}
+
+div#twitterings .clear {
+	clear: both;
+	height: 1px;
+	line-height: 0;
+}
+
+/* end of tikirobot twitter styles */
+
 #sidebar h2 {
 	margin-top: 5px;
 	margin-bottom: 6px;
@@ -963,10 +1030,10 @@ div.entry {
 */
 
 body {
-	background: #f1f1f1;
+	background: #F4F4EE; /* tikirobot change */
 }
 a, a:visited, h1 a:visited, a:active, #main .selected .actions a, #main .selected .actions a:link, #main .selected .actions a:visited, #help dt {
-	color: #3478e3;
+	color: #0099CC; /* tikirobot change */
 }
 a:hover, h1 a:hover, #main .selected .actions a:hover, #main .selected .actions a:active {
 	color: #d54e21;
@@ -986,7 +1053,7 @@ code {
 	text-shadow: 0 1px 0 #fff;
 }
 h2 {
-	color: #555;
+	color: #5F5F39; /* tikirobot change */
 }
 h3 {
 	color: #777;
@@ -1167,14 +1234,15 @@ li.newupdates, li.newcomment {
 	color: #555;
 }
 #wrapper {
-	background: #fff url( i/sidebar_back.gif ) top right repeat-y;
-	border: 1px solid #fff;
+    /* tikirobot change - background color */
+	background: #F4F4EE; /* tikirobot change -  url( i/sidebar_back.gif ) top right repeat-y */
+	/* tikirobot change - border: 1px solid #fff; */
 }
 .sleeve_main {
 	background: transparent;
 }
 #main {
-	background: #fff;
+	background: #F4F4EE; /* tikirobot change */
 }
 
 /*
@@ -1191,7 +1259,8 @@ h3,
 #postbox label,
 #help dd,
 .inlineediting input.title {
-	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	/* font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif; */
+	font-family: Georgia,"Times New Roman",Times,serif; /* tikirobot change */
 	font-weight: 200;
 }
 code, pre {
