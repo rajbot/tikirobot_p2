@@ -130,6 +130,7 @@ blockquote + blockquote {
 	/* tikirobot change - background: url(i/white-93.png); */
 	position: relative;
 	padding: 16px 15px 16px 14px;
+	overflow: hidden; /* tikirobot change for FF */
 }
 #postbox .avatar {
 	margin-top: 16px;
