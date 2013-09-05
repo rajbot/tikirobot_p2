@@ -8,10 +8,12 @@
 	<div id="sidebar">
         <div id="top"></div> <?php /* tikirobot change */ ?>
         <div id="bg"> <?php /* tikirobot change */ ?>
+	<? /*
             <div id="twitterings">
                 <div class="title">Twittering</div>
                 <script type="text/javascript" src="http://tikirobot.net/twitter/"></script>
             </div>
+	   */ ?>
             <ul>
                 <?php
                 if ( !function_exists( 'dynamic_sidebar' ) || !dynamic_sidebar() ) {
